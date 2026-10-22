@@ -2,7 +2,7 @@ define(["./Mage"], function (Mage) {
 return {
 	getData: function(){
 		var mage = new Mage.Mage({
-			talentlvl10:"Selfish Streak",talentlvl15:"Runic Diversity",talentlvl20:"Affinity",
+			talentlvl10:"Selfish Streak",talentlvl15:"Runic Diversity",talentlvl20:"True_Affliction",
 			strBoost:globalStrengthBoost, intBoost:globalIntellectBoost,projectileIncrease:globalArmourProjectileDamage
 		});
 
@@ -20,6 +20,8 @@ return {
 				'b'    : mage.getAttackFromInfo({type:"Fire2",time:FIRE_CAST_SPEED}),
 				// Fireball empowered
 				'B'    : mage.getAttackFromInfo({type:"Fire2",time:FIRE_CAST_SPEED,empowered:true}),
+				// Fireball diversity
+				'k'    : mage.getAttackFromInfo({type:"Fire2",time:FIRE_CAST_SPEED,diversity:true}),
 				// Frost boosted by fireball
 				'f'    : mage.getAttackFromInfo({type:"Frost2",time:FROST_CAST_SPEED,empowered:true}),
 				// Frost boosted by runic diversity (3th spell)

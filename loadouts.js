@@ -39,78 +39,78 @@ if (needsDefaultValues || debug) {
      */
 
 // weaponAffixes: [{"lvl":30},{"plusLvl":7},{"strength":168},{"intellect":168},{"CHARGED_STRIKES":{}},{"BLEED":{}}],
-    const MAGE_WEAPON_STATS = [{"lvl":30},{"plusLvl":7},{"strength":168},{"intellect":168},{"CHARGED_STRIKES":{}},{"BLEED":{}}];
-    const MAGE_ARMOUR_STATS = {critChance:2*RING_CRIT_CHANCE,critDamage:0.08+RING_EMPOWERED,projectileDamage:0.04};
+    const MAGE_WEAPON_STATS = [{"lvl":20},{"plusLvl":0},{"strength":107},{"intellect":107},{"CHARGED_STRIKES":{}},{"BLEED":{}}];
+    const MAGE_ARMOUR_STATS = {critChance:2*RING_CRIT_CHANCE,critDamage:0.00+RING_EMPOWERED,projectileDamage:0.00};
 
 	res[MAGE_VALUE] = {
-		'Frost fire mage - beginner (viable: fire/frost: 0.7-1.0)': {
-			savedAttacks: "b (fbBB)x80",
-			savedTilesets: ['FB6', 'F6B', 'BF6', '0BF'],
-			usingPotsFlag: true,
+		'Rotation mage(preborn) - beginner (viable: fire/frost: 1.16, A:0.89)': {
+			savedAttacks: "afk(afkbb)x80",
+			savedTilesets: ['AFB', '6AF', '6AFB', 'FB2', 'F2B'],
+			usingPotsFlag: false,
 			usingTilesetsFlag: true,
 			averagingCrits: true,
 			weaponAffixes: MAGE_WEAPON_STATS,
 			armourAffixes: MAGE_ARMOUR_STATS,
 			calcCount:1,
-			FIRE_HITS_PER_SECOND: 0.8,
-			FROST_HITS_PER_SECOND: 0.8,
-			AFFLICTION_HITS_PER_SECOND: 0.00,
+			FIRE_HITS_PER_SECOND: 1.16,
+			FROST_HITS_PER_SECOND: 1.16,
+			AFFLICTION_HITS_PER_SECOND: 0.89,
 			borderColor : "#3e95cd",
 		},
-		'Frost fire mage - fast (viable: fire/frost: 1.5-2.125)': {
-			savedAttacks: "b (fbBBBBBB)x80",
-			savedTilesets: ['FB2', 'F2B', 'BF2', '0BF'],
-			usingPotsFlag: true,
+		'Rotation mage (faster) - fast (viable: fire/frost: 1.3, A:1)': {
+			savedAttacks: "afk(afkbb)x80",
+			savedTilesets: ['FB2', 'F2B', 'AFB', '6AFB','6AF'],
+			usingPotsFlag: false,
 			usingTilesetsFlag: true,
 			averagingCrits: true,
 			weaponAffixes: MAGE_WEAPON_STATS,
 			armourAffixes: MAGE_ARMOUR_STATS,
 			calcCount:300,
-			FIRE_HITS_PER_SECOND: 1.5,
-			FROST_HITS_PER_SECOND: 1.5,
-			AFFLICTION_HITS_PER_SECOND: 0.00,
+			FIRE_HITS_PER_SECOND: 1.3,
+			FROST_HITS_PER_SECOND: 1.3,
+			AFFLICTION_HITS_PER_SECOND: 1.0,
 			borderColor : "#3e95cd",
 		},
-		'firespam mage - fast (viable: fire: 2.2-2.5)': {
-			savedAttacks: "b Bx600",
-			savedTilesets: ['32B', '3B2', '2B3'],
-			usingPotsFlag: true,
+		'Rotation mage (very good) - fast (viable: fire/frost: 1.4, A:1.0)': {
+			savedAttacks: "afk(afkbbb)x80",
+			savedTilesets: ['FB2', 'F2B', 'AFB','6AFB', '6AF'],
+			usingPotsFlag: false,
 			usingTilesetsFlag: true,
 			averagingCrits: true,
 			weaponAffixes: MAGE_WEAPON_STATS,
 			armourAffixes: MAGE_ARMOUR_STATS,
 			calcCount:300,
-			FIRE_HITS_PER_SECOND: 2.5,
-			FROST_HITS_PER_SECOND: 0.00,
-			AFFLICTION_HITS_PER_SECOND: 0.00,
+			FIRE_HITS_PER_SECOND: 1.4,
+			FROST_HITS_PER_SECOND: 1.4,
+			AFFLICTION_HITS_PER_SECOND: 1.0,
 			borderColor : "#3e95cd",
 		},
-		'firespam mage - insane (viable: fire: 2.6-2.7)': {
-			savedAttacks: "b Bx800",
-			savedTilesets: ['2B3', '23B', '3B2', '4B3', '5B4' /*The 4 hits a second procs by Orbus lagg sometimes*/],
-			usingPotsFlag: true,
+		'Rotation Mage - insane (viable: fire/frost: 1.6, A:1.0)': {
+			savedAttacks: "afk(afkbbb)x80",
+			savedTilesets: ['AFB2', 'AFB', '6AF', 'FB2', 'F2B' /*The 4 hits a second procs by Orbus lagg sometimes*/],
+			usingPotsFlag: false,
 			usingTilesetsFlag: true,
 			averagingCrits: true,
 			weaponAffixes: MAGE_WEAPON_STATS,
 			armourAffixes: MAGE_ARMOUR_STATS,
 			calcCount:300,
-			FIRE_HITS_PER_SECOND: 2.6,
-			FROST_HITS_PER_SECOND: 0.00,
-			AFFLICTION_HITS_PER_SECOND: 0.00,
+			FIRE_HITS_PER_SECOND: 1.6,
+			FROST_HITS_PER_SECOND: 1.6,
+			AFFLICTION_HITS_PER_SECOND: 1.0,
 			borderColor : "#3e95cd",
 		},
-		'firespam musky mage - needs musky renew (viable: 1.5 - 4.25 hits per second)': {
-			savedAttacks: "b Bx1000\n(h@)x20",
-			savedTilesets: ['0BH', '0HB', '2BH', '3BH', '4BH'],
-			usingPotsFlag: true,
+		'Healing Affliction Mage - needs musky renew (viable: frost/fire:1.3 a:1.0)': {
+			savedAttacks: "afk(afkbbb)x80\n(h@)x20",
+			savedTilesets: ['2HB', 'AHF', '2BH', '6AH', '6AHF'],
+			usingPotsFlag: false,
 			usingTilesetsFlag: true,
 			averagingCrits: true,
 			weaponAffixes: MAGE_WEAPON_STATS,
 			armourAffixes: MAGE_ARMOUR_STATS,
 			calcCount:300,
-			FIRE_HITS_PER_SECOND: 4.25,
-			FROST_HITS_PER_SECOND: 0.00,
-			AFFLICTION_HITS_PER_SECOND: 0.00,
+			FIRE_HITS_PER_SECOND: 1.3,
+			FROST_HITS_PER_SECOND: 1.3,
+			AFFLICTION_HITS_PER_SECOND: 1.00,
 			borderColor : "#3e95cd",
 		},
 		// This mage type is used for having a bard around and the cast speed is not
@@ -558,7 +558,7 @@ function injectLoadout(loadoutName){
 }
 
 function refreshLoadout(){
-	const ADDED_POTS_STAT = (globalUsingPotsFlag ? 250 : 0);
+	const ADDED_POTS_STAT = (globalUsingPotsFlag ? 0 : 0); //no potions currently
 	
 	globalWeaponLvl = 30; // Default
 	globalWeaponPlusLvl = 0; // Default
